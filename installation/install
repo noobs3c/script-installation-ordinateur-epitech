@@ -310,6 +310,12 @@ case $yn in
     * ) sys_install htop;;
 esac
 
+script_header "DESIREZ VOUS INSTALLER TEAMS ?"
+read -p "Installer teams pour pouvoir discuter entre epicamarades [O/n]" yn
+case $yn in
+    [Nn]* );;
+    * ) sys_install Teams && sudo snap install teams-for-linux;;
+esac
 
 script_header "EFFACEMENT DES FICHIERS D'INSTALLATION"
 rm -rvf ../installation
